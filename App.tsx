@@ -27,30 +27,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import WebView from 'react-native-webview';
-
-const HTML = `
-<!DOCTYPE html>\n
-<html>
-  <head>
-    <title>Hello World</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=320, user-scalable=no">
-    <style type="text/css">
-      body {
-        margin: 0;
-        padding: 0;
-        font: 62.5% arial, sans-serif;
-        background: red;
-      }
-    </style>
-  </head>
-  <body>
-    <p>HTML content in red body.</p>
-  </body>
-</html>
-`;
-
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -107,13 +83,6 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <View style={{height: 120}}>
-            <WebView
-              source={{html: HTML}}
-              automaticallyAdjustContentInsets={false}
-              style={{backgroundColor: '#00000000'}}
-            />
-          </View>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
