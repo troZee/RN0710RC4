@@ -26,6 +26,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {multiply} from 'react-native-swift-support';
+
+const result = multiply(3, 7);
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -109,7 +112,7 @@ function App(): JSX.Element {
             style={{backgroundColor: '#00000000'}}
           />
         </View>
-
+        <Text>TURBO MODULE SYNC RESULT: {result}</Text>
         <Button title="Toggle Toast" onPress={() => showToast()} />
         <View
           style={{

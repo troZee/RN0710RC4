@@ -5613,6 +5613,10 @@ react-native-gradle-plugin@^0.71.11:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.11.tgz#0483740373b9778d058a297ecc61acbd0bd8a63b"
   integrity sha512-2m9OwAi93MwqBLxCnqqgwlHyatmkyCk9q3XCl2R0DxOLTY5+WuaL/yb8xRyrWZqmRpbIGy+hotF20c2UKMPqWQ==
 
+"react-native-swift-support@file:react-native-swift-support-0.1.0.tgz":
+  version "0.1.0"
+  resolved "file:react-native-swift-support-0.1.0.tgz#5111ea9d743992e3538e801db12873915636cbaa"
+
 react-native-webview@^11.26.0:
   version "11.26.0"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.26.0.tgz#e524992876fe4a79e69905f0fab8949b470e9f16"
