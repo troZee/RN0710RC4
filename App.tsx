@@ -28,6 +28,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import {multiply} from 'react-native-swift-support';
 import Toast from 'react-native-simple-toast';
+import PagerView from 'react-native-pager-view';
 
 const result = multiply(3, 7);
 
@@ -54,7 +55,7 @@ const HTML = `
     </style>
   </head>
   <body>
-    <p>HTML content in red body.</p>
+    <p>LIBRARY, WHICH DOES NOT SUPPORT FABRIC</p>
   </body>
 </html>
 `;
@@ -112,6 +113,16 @@ function App(props: Object): JSX.Element {
             style={{backgroundColor: '#00000000'}}
           />
         </View>
+        <PagerView
+          style={{width: '100%', height: 120, backgroundColor: 'green'}}
+          initialPage={0}>
+          <View key="1">
+            <Text>LIBRARY WHICH SUPPORTS BOTH FABRIC AND PAPER</Text>
+          </View>
+          <View key="2">
+            <Text>Second page</Text>
+          </View>
+        </PagerView>
         <Text>
           __turboModuleProxy RESULT: {/* @ts-expect-error */}
           {global.__turboModuleProxy != null ? 'true' : 'false'}

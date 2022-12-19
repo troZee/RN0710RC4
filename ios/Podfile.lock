@@ -624,6 +624,14 @@ PODS:
   - React-jsinspector (0.71.0-rc.4)
   - React-logger (0.71.0-rc.4):
     - glog
+  - react-native-pager-view (6.1.2):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-RCTFabric
+    - ReactCommon/turbomodule/core
   - react-native-simple-toast (2.0.0):
     - RCT-Folly
     - RCTRequired
@@ -785,6 +793,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-simple-toast (from `../node_modules/react-native-simple-toast`)
   - react-native-swift-support (from `../node_modules/react-native-swift-support`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -869,6 +878,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-simple-toast:
     :path: "../node_modules/react-native-simple-toast"
   react-native-swift-support:
@@ -944,6 +955,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ac2d82b86fc05e2dd4989c04cc17271fc97f1e64
   React-jsinspector: e7f24be02178a7a2b29a5706ccf9e478f6a708eb
   React-logger: bfba604c0fe56388474e0b2bdcb817ef54174f32
+  react-native-pager-view: d607d1d01df02c9bfa2cf0a73fb66d90de6a3c51
   react-native-simple-toast: 222daddb7c38070d14eaa90b10b36e3d4bc54a88
   react-native-swift-support: f85d53e4ea0a13c7114341facfb61fa0a4c2624a
   react-native-webview: 994b9f8fbb504d6314dc40d83f94f27c6831b3bf
