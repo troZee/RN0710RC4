@@ -26,6 +26,14 @@
 /// @return: `true` if the `concurrentRoot` feature is enabled. Otherwise, it returns `false`.
 - (BOOL)concurrentRootEnabled
 {
+  return false;
+}
+
+- (BOOL)fabricEnabled {
+  return false;
+}
+
+- (BOOL)turboModuleEnabled {
   return true;
 }
 

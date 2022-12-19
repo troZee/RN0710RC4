@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -15,7 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
-  ToastAndroid,
+  UIManager,
   Button,
 } from 'react-native';
 
@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {multiply} from 'react-native-swift-support';
+import Toast from 'react-native-simple-toast';
 
 const result = multiply(3, 7);
 
@@ -59,7 +60,7 @@ const HTML = `
 `;
 
 const showToast = () => {
-  ToastAndroid.show('EXAMPLE TURBOMODULE', ToastAndroid.SHORT);
+  Toast.show('EXAMPLE TURBOMODULE', Toast.SHORT);
 };
 
 function Section({children, title}: SectionProps): JSX.Element {
@@ -88,9 +89,8 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+function App(props: Object): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -112,27 +112,20 @@ function App(): JSX.Element {
             style={{backgroundColor: '#00000000'}}
           />
         </View>
+        <Text>
+          __turboModuleProxy RESULT: {/* @ts-expect-error */}
+          {global.__turboModuleProxy != null ? 'true' : 'false'}
+        </Text>
         <Text>TURBO MODULE SYNC RESULT: {result}</Text>
         <Button title="Toggle Toast" onPress={() => showToast()} />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+        <Text>INITIAL PROPS</Text>
+        {Object.keys(props).map(key => (
+          // @ts-ignore
+          <Text key={`${key}${props[key]}`}>
+            {/* @ts-ignore */}
+            {key}: {String(props[key])}
+          </Text>
+        ))}
       </ScrollView>
     </SafeAreaView>
   );

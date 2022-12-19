@@ -5613,6 +5613,11 @@ react-native-gradle-plugin@^0.71.11:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.11.tgz#0483740373b9778d058a297ecc61acbd0bd8a63b"
   integrity sha512-2m9OwAi93MwqBLxCnqqgwlHyatmkyCk9q3XCl2R0DxOLTY5+WuaL/yb8xRyrWZqmRpbIGy+hotF20c2UKMPqWQ==
 
+react-native-simple-toast@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-simple-toast/-/react-native-simple-toast-2.0.0.tgz#08f664acaaf1018fe0386aed5b3b38462ba09f83"
+  integrity sha512-x++CvxTLSTv+o5zaC8lv5W37VH0qMDs31wQPV1DH8OMHo1EJ3cMY0Nwblha1lwA9PK1ASuGLvHmumoVFQvnLkg==
+
 "react-native-swift-support@file:react-native-swift-support-0.1.0.tgz":
   version "0.1.0"
   resolved "file:react-native-swift-support-0.1.0.tgz#5111ea9d743992e3538e801db12873915636cbaa"
